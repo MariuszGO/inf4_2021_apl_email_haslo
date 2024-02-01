@@ -1,0 +1,39 @@
+﻿<Window x:Class="inf4_2021.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:inf4_2021"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50px" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+<Canvas Grid.Column="1" Background="#008080" />
+        <Canvas Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Background="#FF00FFED" Opacity="0.6"></Canvas>
+        <Label Grid.Row="0" Grid.Column="1" Content="Rejestruj Konto" FontSize="20px" HorizontalAlignment="Center" Background="Teal"/>
+        <Label Grid.Row="1" Grid.Column="1" Width="100" Height="30" HorizontalAlignment="Left" Content="Podaj email"></Label>
+        <TextBox x:Name="email" Grid.Row="1" Grid.Column="1" Width="220" Height="30"  ></TextBox>
+        
+        <Label Grid.Row="2" Grid.Column="1" Width="100" Height="30" HorizontalAlignment="Left" Content="Podaj hasło"></Label>
+        <PasswordBox  x:Name="haslo" Grid.Row="2" Grid.Column="1" Width="220" Height="30"  ></PasswordBox>
+
+        <Label Grid.Row="3" Grid.Column="1" Width="100" Height="30" HorizontalAlignment="Left" Content="Powtórz hasło"></Label>
+        <PasswordBox  x:Name="haslo1" Grid.Row="3" Grid.Column="1" Width="220" Height="30"  ></PasswordBox>
+
+        <Button Grid.Column="1" Grid.Row="4" Width="120" Height="30" Margin="20" VerticalAlignment="Top" Content="Zatwierdź" Click="Button_Click" ></Button>
+        <Label x:Name="wynik" Grid.Row="4" Grid.Column="1" Content="PESEL" VerticalAlignment="Bottom" Margin="20" HorizontalAlignment="Center"></Label>
+    
+    </Grid>
+</Window>
